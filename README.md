@@ -2,6 +2,9 @@
 PROS template for the C# GUI project. 
 ![image](https://user-images.githubusercontent.com/36551149/124071337-c8e35c80-da04-11eb-999c-a1ccbff2fd30.png)
 
+# Using Grafana
+The Grafana version of this template is currently nonexistent, but will be added as soon as the [pros-grafana](https://github.com/BWHS-Robotics/pros-grafana) plugin is stable. 
+
 # Installation Steps
 ### Using the pre-built template
 Under the **Releases** panel of the repository you can find all of the uploaded zip versions for the project. Download the version you want and save it within the root of your PROS project. With the zip in the root of your project, use ``prosv5 c fetch .`` to install the template into your local depot, and add it to your existing PROS project using ``pros c apply guilib --force-apply``. Because the template is now in your local PROS depot, the template can be installed in any compatible PROS project without the need of redownloading or fetching the `guilib` package.
