@@ -1,3 +1,6 @@
+# Archive Notice
+With the new system based around Grafana providing far more features, this version of the GUI project is no longer supported. 
+
 # pros-gui-template
 PROS template for the C# GUI project. 
 ![image](https://user-images.githubusercontent.com/36551149/124071337-c8e35c80-da04-11eb-999c-a1ccbff2fd30.png)
