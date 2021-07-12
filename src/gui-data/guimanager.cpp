@@ -23,11 +23,11 @@ void GUIManager::startTask() {
 void GUIManager::sendConfiguration() {
     nlohmann::json configJson;
 
-
-
     // Send initial configuration data
-    for (auto& module : modules) {
-        configJson[module->getTitle()] = module->getConfiguration();
+    for (auto &var : variableData) {
+        for (auto& pair : var->get_data()) {
+            configJson[pair.first] = pair.second;
+        }
     }
 
     std::string jsonString = configJson.dump();
@@ -45,8 +45,10 @@ void GUIManager::sendData() {
     nlohmann::json dataJson;
 
     // Add all of the chart data to the json
-    for (auto& module : modules) {
-        dataJson[module->getTitle()] = module->getData();
+    for (auto &var : variableData) {
+        for (auto& pair : var->get_data()) {
+            dataJson[pair.first] = pair.second;
+        }
     }
 
     // Print out the JSON to be picked up by the C# parser
@@ -54,11 +56,6 @@ void GUIManager::sendData() {
     std::cout << "GUI_DATA_8378" << "|" << dataJson << std::endl;
 }
 
-void GUIManager::stopDebugging() {
+void GUIManager::stopTask() {
     alive = false;
 }
-
-void GUIManager::registerModule(const std::shared_ptr<Module>& chart) {
-    modules.push_back(chart);
-}
-

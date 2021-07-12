@@ -78,11 +78,10 @@ void opcontrol(void);
 //#include <iostream>
 
 // GUI Includes
-#include "gui-data/modules/module.h"
-#include "gui-data/modules/charts/chartmodule.h"
-#include "gui-data/modules/charts/types/linechartmodule.h"
-#include "gui-data/modules/charts/types/barchartmodule.h"
-#include "gui-data/modules/movement/odometrymodule.h"
+#include "gui-data/variables/variabledatahandler.h"
+#include "gui-data/variables/variable.h"
+#include "gui-data/variables/variablegroup.h"
+
 #include "gui-data/guimanager.h"
 
 

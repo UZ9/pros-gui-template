@@ -7,7 +7,7 @@
 
 class GUIManager {
 private:
-    std::vector<std::shared_ptr<Module>> modules;
+    std::vector<VariableDataHandler*> variableData;
 public:
     /**
      * Start the task sending data to the WestCore C# GUI named pipe
@@ -17,13 +17,15 @@ public:
     /**
      * Signal the GUI to stop all debugging prints to the console.
      */
-    void stopDebugging();
+    void stopTask();
 
     /**
-     * Registers a chart to WestCore C# GUI application
-     * @param chart the chart will be registered
+     * Adds a new DataHandler to be registered into the GUI.
+     * @param dataHandler Either a Variable<T> or VariableGroup<T> object
      */
-    void registerModule(const std::shared_ptr<Module>& module);
+    void registerDataHandler(VariableDataHandler* dataHandler) {
+        variableData.push_back(dataHandler);
+    }
 private:
     bool alive;
 
