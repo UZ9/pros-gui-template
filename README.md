@@ -1,6 +1,6 @@
 # pros-gui-template
 PROS template for the C# GUI project. 
-![image](https://user-images.githubusercontent.com/36551149/124071337-c8e35c80-da04-11eb-999c-a1ccbff2fd30.png)
+![image](https://user-images.githubusercontent.com/36551149/125344432-efff2f80-e31c-11eb-9160-0711588cc207.png)
 
 # Deprecation Notice
 This repository previously hosted the C# GUI version of this project, but has since then been archived. If you still 
